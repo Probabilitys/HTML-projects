@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    padding: 50px;
+    width: 60vw;
+    min-height: 100vh;
+    background-color: rgb(185, 205, 221);
+}
+
+h1 {
+    text-align: center;
+}
+
+#header {
+    padding: 10px;
+    background-color: rgb(72, 98, 119);
+    font-size: 40px;
+    font-weight: bold;
+    color: #eee;
+    border: 5px double #eee;
+}
+
+#caption {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#food-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#left-food {
+    border-right: 1px solid black;
+    padding: 0 15px; 
+    width: 50%;
+    min-height: 100px;
+}
+
+#right-food {
+    border-left: 1px solid black;
+    padding: 0 15px; 
+    width: 50%;
+    min-height: 100px;
+}
+
+h2 {
+    clear: both;
+    margin: 0;
+    padding: 20px 0 10px 0;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+.food-para {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    float: left;
+}
+
+.food-title {
+    margin: 0 0 5px 0;
+    max-width: 80%;
+    font-weight: bold;
+    
+}
+
+.price {
+    margin: 0 0 5px 0;
+    float: right;
+    text-align: right;
+}
+
+.discription {
+    margin: 0;
+    padding: 5px 0;
+    clear: both;
+    text-align: center;
+    color: white;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 25px;
+}
