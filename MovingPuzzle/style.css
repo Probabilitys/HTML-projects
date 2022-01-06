@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Apple Chancery', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    margin: 20px;
+}
+
+#message {
+    margin-top: 20px;
+}
+
+hr {
+    width: 90vw;
+}
+
+#board {
+    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    background-color: steelblue;
+    max-width: 600px;
+    max-height: 700px;
+    margin: 30px auto;
+    overflow: auto;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.item {
+    font-size: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    margin-bottom: 30px;
+    padding: 15px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: lightgray;
+    border-top: 3px solid gray;
+    border-left: 3px solid gray;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+
+#btn:active {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid gray;
+    border-right: 3px solid gray;
+}
+
+.pointer {
+    cursor: not-allowed;
+}

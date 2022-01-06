@@ -1,0 +1,115 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bgHue: 250;
+    --xHue: 0;
+    --circleHue: 120;
+    --size: 70px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 100vw;
+}
+
+#button {
+    margin-top: 30px;
+    padding: 15px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+#header {
+    font-family: 'Apple Chancery', cursive;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.grid {
+    background-color: hsl(var(--bgHue), 75%, 30%);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* X class */
+.board .x::before,
+.board .x::after,
+.board.x .grid:not(.x):not(.circle):hover::before,
+.board.x .grid:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--size) * 0.15);
+    height: calc(var(--size) * 1.2);
+    background-color: hsl(var(--xHue), 100%, 60%);
+}
+
+.board.x .grid:not(.x):not(.circle):hover::before,
+.board.x .grid:not(.x):not(.circle):hover::after {
+    background-color: hsl(var(--xHue), 50%, 60%);
+}
+
+.board .x::after,
+.board.x .grid:not(.x):not(.circle)::after {
+    transform: rotate(45deg);
+}
+
+.board .x::before,
+.board.x .grid:not(.x):not(.circle)::before {
+    transform: rotate(-45deg);
+}
+/* X class end */
+
+/* Circle class */
+.board .circle::before,
+.board .circle::after,
+.board.circle .grid:not(.x):not(.circle):hover::before,
+.board.circle .grid:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.board .circle::before,
+.board.circle .grid:not(.x):not(.circle):hover::before {
+    width: var(--size);
+    height: var(--size);
+    background-color: hsl(var(--circleHue), 100%, 60%);
+}
+
+.board.circle .grid:not(.x):not(.circle):hover::before {
+    background-color: hsl(var(--circleHue), 50%, 60%);
+}
+
+.board .circle::after,
+.board.circle .grid:not(.x):not(.circle):hover::after {
+    width: calc(var(--size) * 0.7);
+    height: calc(var(--size) * 0.7);
+    background-color: hsl(var(--bgHue), 75%, 30%);
+}
+/* Circle class end */
+
+.x,
+.circle {
+    cursor: not-allowed;
+}
+
+.pointer {
+    cursor: not-allowed;
+}
