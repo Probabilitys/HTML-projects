@@ -1,0 +1,207 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+}
+
+.rm-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-section {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.rm-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.rm-menu li {
+    color: black;
+    text-decoration: none;
+}
+
+.link-style {
+    font-size: 1.25em;
+    padding: 5px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+}
+
+.link-active:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: blue;
+}
+
+.link-style:hover:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: blue;
+}
+
+hr {
+    width: 100%;
+}
+
+p {
+    padding: 5px 10px;
+}
+
+.page-title {
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+    text-align: center;
+}
+
+.search-bar {
+
+    padding: 3px;
+    margin: 10px 0;
+}
+
+.player {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.player div {    
+    padding: 3px 5px;
+    border: 1px solid white;
+}
+
+.player:not(.title) {
+    background-color: skyblue;
+    text-align: left;
+}
+
+.title {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.number {
+    width: 15%;
+    text-align: center;
+}
+
+.position {
+    width: 15%;
+    text-align: center;
+}
+
+.name {
+    width: 40%;
+}
+
+.birth-date {
+    width: 30%;
+}
+
+.honour {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.honour > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.honour-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.honour-img {
+    width: 30%;
+
+}
+
+.honour-img img {
+    width: 50%;
+    align-self: center;
+}
+
+.honour-number {
+    width: 10%;
+
+}
+
+.honour-season {
+    width: 60%;
+}
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer::before, .footer::after {
+    content: '';
+    background-color: gray;
+    width: 40vw;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+}
+
+.footer::before {
+    left: 0;
+}
+
+.footer::after {
+    right: 0;
+}
+
+.footer img {
+    width: 50px;
+}
